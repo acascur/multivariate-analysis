@@ -42,7 +42,7 @@ In this program we can use data in files:
 
 ## Exercise 3. *Cluster analysis*
 
-A program which makes an analysis of clusters using the k-means algorithm. Given a set of k-dimensional data, write a program to calculate
+A program which makes an analysis of clusters using the k-means algorithm. Given a set of k-dimensional data, we write a program to calculate
 the best choice for $M$ clusters using the k-means algorithm *(Lloyd’s algorithm)*. Given a set of data $\vec{x_i}, ..., \vec{x_N}$ where each vector $\vec{x_i}$ belongs to a k-dimensional space, we will look for the existence of clusters of data, i.e.: We will try to determine whether the data
 can be splitted into $s$ classes, $S_{\alpha}$, such that for every event we can say that $\vec{x_i} \in S_{\alpha}$ for some $\alpha = 1,...,s$.
 
@@ -61,19 +61,16 @@ In this program we use the data from file **test_cluster.dat**, but you can use 
 
 ## Exercise 4. *Agglomerate Hierarchical Clustering*
 
-A program which make an analysis of clusters by using the *Ward’s algorithm*. Given a set of k-dimensional data, write a program to calculate a hierarchical tree of clusters.
+A program which make an analysis of clusters by using the *Ward’s algorithm*. Given a set of k-dimensional data, we write a program to calculate a hierarchical tree of clusters. The algorithm of Ward’s is a classical algorithm which is useful for small number of events. It starts by building the distance between every pair of events. **The LLoyd’s algorithm can be implemented like this:**
 
-The algorithm of Ward’s is a classical algorithm which is useful for small number of events. It starts by building the distance between every pair of events. Define $d(i, l)$ the distance between events $\vec{x_i}$ and $\vec{x_l}$.
-
-1. Find the pair of events $(i, l)$ with the smallest $d(i, l)$.
-2. Group together the events $\vec{x_i}$ and $\vec{x_l}$ , and produce a “grouped event” or agglomerate $\vec{x_{il}}$.
-3. From the matrix $d$, delete the rows and columns $i$ and $l$.
-4. Add a new row and column $il$ by evaluating the distance from every other event to the new agglomerate.
-5. Repeat step 1, until all the events are grouped together and only survives one single group.
+1. Define $d(i, l)$ the distance between events $\vec{x_i}$ and $\vec{x_l}$.
+2. Find the pair of events $(i, l)$ with the smallest $d(i, l)$.
+3. Group together the events $\vec{x_i}$ and $\vec{x_l}$ , and produce a “grouped event” or agglomerate $\vec{x_{il}}$.
+4. From the matrix $d$, delete the rows and columns $i$ and $l$.
+5. Add a new row and column $il$ by evaluating the distance from every other event to the new agglomerate.
+6. Repeat step 1, until all the events are grouped together and only survives one single group.
 
 The data are the same as in the previous program.
-
-## Exercise 5. *no sé*
 
 
 
