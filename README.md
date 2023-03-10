@@ -61,7 +61,7 @@ In this program we use the data from file **test_cluster.dat**, but you can use 
 
 ## Exercise 4. *Agglomerate Hierarchical Clustering*
 
-A program which make an analysis of clusters by using the *Ward’s algorithm*. Given a set of k-dimensional data, we write a program to calculate a hierarchical tree of clusters. The algorithm of Ward’s is a classical algorithm which is useful for small number of events. It starts by building the distance between every pair of events. **The LLoyd’s algorithm can be implemented like this:**
+A program which make an analysis of clusters by using the *Ward’s algorithm*. Given a set of k-dimensional data, we write a program to calculate a hierarchical tree of clusters. The algorithm of Ward’s is a classical algorithm which is useful for small number of events. It starts by building the distance between every pair of events. **The Ward’s algorithm can be implemented like this:**
 
 1. Define $d(i, l)$ the distance between events $\vec{x_i}$ and $\vec{x_l}$.
 2. Find the pair of events $(i, l)$ with the smallest $d(i, l)$.
