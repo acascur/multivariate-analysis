@@ -28,7 +28,7 @@ In this program we use the data in file **test1.dat** *(You can find this file i
 
 ## Exercise 2. *PCA analysis in k dimensions*
 
-A program that given a set of data $(x_{11}, x_{22}, ..., x_{1k}), ..., (x_{n1}, x_{n2} ..., x_{nk})$ read from a file:
+A program that given a set of data $(x_{11}, x_{12}, ..., x_{1k}), ..., (x_{n1}, x_{n2} ..., x_{nk})$ read from a file:
 
 1. Evaluates the PCA: Evaluates the eigenvalues, sorts them and choose the two largest eigenvalues.
 2. Projects every event onto the subspace of the two eigenvectors.
