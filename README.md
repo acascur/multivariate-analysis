@@ -72,7 +72,24 @@ A program which make an analysis of clusters by using the *Ward’s algorithm*. 
 
 The data are the same as in the previous program.
 
+## Exercise 6. *Fisher Analysis*
 
+Given two set of data belonging to different populations $A = (x_1, ..., x_n)$, and $B = (y_1, ..., y_n)$ ($x_i$ and $y_i$ are in a
+k-dimensional space), we write a program that calculates the linear Fisher discriminant so that given a new event $z$ classifies it
+either as type $A$ or $B$ based on the discriminant.
+
+We can use the data from files **test_p.dat** and **test_f.dat**. Alternatively we may use **train_fisher_A.dat** and **train_fisher_B.dat** to train the method and files **test_fisher_A.dat** and **test_fisher_B.dat** to test the method. *(You can find this files in the datasets folder)*.
+
+## Exercise 7. *Separation of populations using a neural network*
+
+Given two set of data belonging to different populations $A = (x_1, ..., x_n)$, and $B = (y_1, ..., y_n)$ ($x_i$ and $y_i$ are in a
+k-dimensional space), we write a program that uses a neural network classifier to:
+
+1. Train the network with the two population.
+2. Given a new value z classifies it either as A or B using the output of the network for that value.
+3. Estimate the confusion matrix for the neural network.
+
+You may use the data files from the previous program (Exercise 6). *(You can find this files in the datasets folder)*.
 
 
 
