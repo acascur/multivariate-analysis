@@ -20,7 +20,7 @@ In this program we use the data in file **test0.dat** *(You can find this file i
 
 A program that given a set of data $(x_{11}, ..., x_{1k}), ..., (x_{n1}, ..., x_{nk})$ read from a file:
 
-1. Evaluates $mean(x_{\alpha})$, $mean(y_{alpha})$, and the correlation matrix.
+1. Evaluates $mean(x_{\alpha})$, $mean(y_{\alpha})$, and the correlation matrix.
 2. Defines a function such that given a set of indices $\alpha_1, ... \alpha_l,$  $l < k$, and a set of numbers $x_1...x_l$ calculates the best
 possible choice for the rest of variables.
 
@@ -43,8 +43,8 @@ In this program we can use data in files:
 ## Exercise 3. *Cluster analysis*
 
 A program which makes an analysis of clusters using the k-means algorithm. Given a set of k-dimensional data, write a program to calculate
-the best choice for $M$ clusters using the k-means algorithm *(Lloyd’s algorithm)*. Given a set of data $\vec{x}_i, ..., \vec{x}_N$ where each vector $\vec{x}_i$ belongs to a k-dimensional space, we will look for the existence of clusters of data, i.e.: We will try to determine whether the data
-can be splitted into $s$ classes, $S_{\alpha}$, such that for every event we can say that $\vec{x}_i \in S_{\alpha}$ for some $\alpha = 1,...,s$.
+the best choice for $M$ clusters using the k-means algorithm *(Lloyd’s algorithm)*. Given a set of data $\vec{x_i}, ..., \vec{x_N}$ where each vector $\vec{x_i}$ belongs to a k-dimensional space, we will look for the existence of clusters of data, i.e.: We will try to determine whether the data
+can be splitted into $s$ classes, $S_{\alpha}$, such that for every event we can say that $\vec{x_i} \in S_{\alpha}$ for some $\alpha = 1,...,s$.
 
 Assuming that the number of clusters is known, $M$. The problem consists on finding the centers of the $M$ clusters such that the sum of the distances of every point to its cluster is minimized. **The LLoyd’s algorithm can be implemented like this:**
 
@@ -63,9 +63,17 @@ In this program we use the data from file **test_cluster.dat**, but you can use 
 
 A program which make an analysis of clusters by using the *Ward’s algorithm*. Given a set of k-dimensional data, write a program to calculate a hierarchical tree of clusters.
 
+The algorithm of Ward’s is a classical algorithm which is useful for small number of events. It starts by building the distance between every pair of events. Define $d(i, l)$ the distance between events $\vec{x_i}$ and $\vec{x_l}$.
+
+1. Find the pair of events $(i, l)$ with the smallest $d(i, l)$.
+2. Group together the events $\vec{x_i}$ and $\vec{x_l}$ , and produce a “grouped event” or agglomerate $\vec{x_{il}}$.
+3. From the matrix $d$, delete the rows and columns $i$ and $l$.
+4. Add a new row and column $il$ by evaluating the distance from every other event to the new agglomerate.
+5. Repeat step 1, until all the events are grouped together and only survives one single group.
+
 The data are the same as in the previous program.
 
-## Exercise 5. *Agglomerate Hierarchical Clustering*
+## Exercise 5. *no sé*
 
 
 
